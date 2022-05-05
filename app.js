@@ -184,17 +184,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// "this" refers to the parent objects that called it. In this case it was the joe object which is and instance of "Student".
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// In this case "this" refered to the window or browser object.
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// Arrow functions do not enable the default "this" behavior and skip the current object to refer to the next containing "this" object. In this instance, the next higher "this" referred to the window/browser/global "this"
